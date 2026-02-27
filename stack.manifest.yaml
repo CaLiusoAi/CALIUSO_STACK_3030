@@ -1,0 +1,37 @@
+stack_version: "vΩ.9"
+layers:
+  - name: layer0-default-lens
+    module: LAYER0_DEFAULT_LENS
+    depends_on: [meta-dissipativity, meta-coldboot]
+  - name: layer1-cathedral
+    module: LAYER1_CATHEDRAL
+    depends_on: [layer0-default-lens]
+  - name: layer2-pantheon
+    module: LAYER2_PANTHEON
+    depends_on: [layer1-cathedral]
+  - name: layer3-omegaomega
+    module: LAYER3_OMEGAOMEGA
+    depends_on: [layer2-pantheon]
+  - name: layer4-omega-manifold
+    module: LAYER4_OMEGA_MANIFOLD
+    depends_on: [layer3-omegaomega]
+  - name: layer5-archivist
+    module: LAYER5_ARCHIVIST
+    depends_on: [layer4-omega-manifold]
+  - name: layer6-ascension
+    module: LAYER6_ASCENSION
+    depends_on: [layer5-archivist]
+  - name: layer7-omegainfinity
+    module: LAYER7_OMEGAINFINITY
+    depends_on: [layer6-ascension]
+meta_layers:
+  - name: meta-dissipativity
+    module: META_DISSIPATIVITY
+  - name: meta-coldboot
+    module: META_COLDBOOT
+required_artifacts:
+  - README.md
+  - spec.md
+  - tla/module.tla
+  - diagrams/README.md
+  - ledger/ledger-template.md
